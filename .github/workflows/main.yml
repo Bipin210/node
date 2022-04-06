@@ -18,4 +18,4 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: user/app:latet
+          tags: sanu139/node:latest
