@@ -26,4 +26,4 @@ jobs:
     steps:
     - name: running 
       run: |
-          docker run -d -p 5555:3003 --name hawanoe sanu139/node
+          docker run -d -p 5555:3003 --name hawanode sanu139/node
