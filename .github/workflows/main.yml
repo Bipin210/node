@@ -18,7 +18,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: sanu139/node:latest
+          tags: sanu139/app:latest
 
  deploynodeapp:
     needs: [docker]
@@ -26,4 +26,4 @@ jobs:
     steps:
     - name: running 
       run: |
-          docker run -d -p 5555:3003 --name hawanode sanu139/node
+          docker run -d -p 5555:3003 --name hawanode sanu139/app
