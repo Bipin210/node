@@ -19,7 +19,7 @@ jobs:
     - name:  Push 
       uses: mr-smithers-excellent/docker-build-push@v5
       with:
-           image: sanu139/
+           image: sanu139
            registry: docker.io
            username: ${{ secrets.DOCKER_USERNAME }}
            password: ${{ secrets.DOCKER_PASSWORD }}
