@@ -26,4 +26,5 @@ jobs:
     steps:
     - name: running 
       run: |
+          docker rm --force ramnode
           docker run -d -p 5555:3003 --name ramnode sanu139/app
