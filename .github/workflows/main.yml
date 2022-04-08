@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - 'master'
-      - 'devlopment'
+      - 'develop'
 
 jobs:
  docker:
@@ -27,5 +27,5 @@ jobs:
     steps:
     - name: running 
       run: |
-          docker rm --force ramnode
+          docker rm --force hawanode
           docker run -d -p 5555:3003 --name hawanode sanu139/app
