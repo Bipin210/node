@@ -20,7 +20,7 @@ jobs:
         with:
           push: true
           tags: sanu139/app:latest
-
+ if: github.ref_name == 'master'
  deploynodeapp:
     needs: [docker]
     runs-on: self-hosted
@@ -29,3 +29,12 @@ jobs:
       run: |
           docker rm --force hawanode
           docker run -d -p 5555:3003 --name hawanode sanu139/app
+ else: 
+ devnode:
+    needs: [docker]
+    runs-on: self-hosted
+    steps:
+    - name: devrun
+      run: |
+        docker rm --force  devnode
+        docker run -d -p 5000:3003 --name devnode sanu139/app
