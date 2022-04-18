@@ -10,6 +10,6 @@ export default () => (
 <h1> This is my first CI&CD </h1>
 <h1> CICD on kubernetes</h1>
 <h2>The href Attribute</h2>
-<p>HTML links are defined with the a tag. The link address is specified in the href attribute:</p>
+
   </div>
 );
