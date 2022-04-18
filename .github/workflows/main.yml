@@ -28,5 +28,5 @@ jobs:
     steps:
     - name: running 
       run: |
-          docker rm --force hawanode
-          docker run -d -p 5555:3003 --name hawanode sanu139/app
+          cd /home/anu/wordpress
+          kubectl apply -f node.yml
