@@ -9,7 +9,5 @@ export default () => (
     <h1>Home page (API_URL: {API_URL})</h1>
 <h1> This is my first CI&CD </h1>
 <h1> CICD on kubernetes</h1>
-<h2>The href Attribute</h2>
-
   </div>
 );
