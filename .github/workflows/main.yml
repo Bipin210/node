@@ -29,5 +29,4 @@ jobs:
     - name: running 
       run: |
           cd /home/anu/wordpress
-          sed -i 's/tag/bipin/g' /home/anu/wordpress/node.yml
           kubectl apply -f node.yml
