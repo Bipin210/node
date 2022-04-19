@@ -32,5 +32,4 @@ jobs:
           cd /home/anu/wordpress
           ls
           sed -i "32d" node.yml
-          sed -i "/containers:/a \ \ \ \ \ \ - image:\ sanu139/app:${{ env.TAG }}" node.yml
           kubectl apply -f node.yml
