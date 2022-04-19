@@ -21,7 +21,7 @@ jobs:
         with:
           push: true
           run: echo ${{ env.COMMIT_SHA }}
-          tags: sanu139/app:${{ env.COMMIT_SHA }}
+          tags: sanu139/app:'${ env.COMMIT_SHA }'
 
  deploynodeapp:
     needs: [docker]
