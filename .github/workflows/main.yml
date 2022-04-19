@@ -27,15 +27,10 @@ jobs:
     needs: [docker]
     runs-on: self-hosted
     steps:
-    - name: Find and Replace
-      uses: jacobtomlinson/gha-find-replace@v2
-      with:
-          find: "sanu139/app:*"
-          replace: "sanu139/app:${{ env.TAG }}"
-          include: "/home/anu/wordpress/node.yml"
-          regex: true
     - name: running 
       run: |
           cd /home/anu/wordpress
           ls
+          sed -i "32d" node.yml
+          sed -i "/containers:/a \ \ \ \ \ \ - image:\ sanu139/app: ${{ env.TAG }}
           kubectl apply -f node.yml
