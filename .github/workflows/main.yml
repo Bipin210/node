@@ -29,4 +29,5 @@ jobs:
     - name: running 
       run: |
           cd /home/anu/wordpress
+          kubectl delete -f node.yml
           kubectl apply -f node.yml
