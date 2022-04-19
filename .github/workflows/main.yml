@@ -1,5 +1,5 @@
 
-name: ci cd
+name: ci cd new
 
 on:
   push:
