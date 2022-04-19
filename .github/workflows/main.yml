@@ -20,8 +20,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          run: echo ${{ env.COMMIT_SHA }}
-          tags: sanu139/app:'${ env.COMMIT_SHA }'
+          tags: sanu139/app:${GIT_COMMIT}
 
  deploynodeapp:
     needs: [docker]
@@ -30,5 +29,5 @@ jobs:
     - name: running 
       run: |
           cd /home/anu/wordpress
-          sed -i 's/image: sanu139/app:*/image: sanu139/app:${{ env.COMMIT_SHA }}/g' ./node.yaml
+          sed -i 's/image: sanu139/app:*/image: sanu139/app:${GIT_COMMIT}/g' ./node.yaml
           kubectl apply -f node.yml
