@@ -9,7 +9,7 @@ on:
 jobs:
  develop-dev:
     needs: [docker] 
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     if: contains('refs/heads/develop',github.ref)
     steps:
     - name: Set tag in env
