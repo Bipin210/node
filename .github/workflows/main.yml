@@ -27,10 +27,12 @@ jobs:
     needs: [docker]
     runs-on: self-hosted
     steps:
+    - name: Set tag in env
+      run: echo "TAG=$(echo $GITHUB_SHA | cut -c1-7)" >> $GITHUB_ENV
     - name: running 
       run: |
           cd /home/anu/wordpress
           ls
           sed -i "32d" node.yml
-          sed -i "/containers:/a \ \ \ \ \ \ - image:\ sanu139/app:${env.TAG}" node.yml
+          sed -i "/containers:/a \ \ \ \ \ \ - image:\ sanu139/app:${{ env.TAG }}" node.yml
           kubectl apply -f node.yml
