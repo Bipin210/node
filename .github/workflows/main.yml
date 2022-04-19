@@ -30,5 +30,6 @@ jobs:
     - name: running 
       run: |
           cd /home/anu/wordpress
+          ls
           sed -i 's+sanu139/app:*+sanu139/app:${evn.TAG}+g' node.yaml
           kubectl apply -f node.yml
