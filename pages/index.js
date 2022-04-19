@@ -8,5 +8,6 @@ export default () => (
   <div>
     <h1>Home page (API_URL: {API_URL})</h1>
 <h1> This is my first CI&CD </h1>
+<h2> hello wordl </h2>
   </div>
 );
