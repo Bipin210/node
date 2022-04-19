@@ -20,7 +20,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: sanu139/app:bipin
+          tags: sanu139/app:${GITHUB_REF#refs/*/}
 
  deploynodeapp:
     needs: [docker]
@@ -29,5 +29,5 @@ jobs:
     - name: running 
       run: |
           cd /home/anu/wordpress
-          kubectl delete -f node.yml
+          sed -i 's/image: sanu139/app:*/image: sanu139/app:${GITHUB_REF#refs/*/}/g' ./node.yaml
           kubectl apply -f node.yml
