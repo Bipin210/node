@@ -46,6 +46,6 @@ jobs:
       run: |
           cd /home/anu/wordpress
           ls
-          sed -i "33d" node.yml
+          sed -i "34d" node.yml
           sed -i "/containers:/a \ \ \ \ \ \ - image:\ sanu139/app:${{ env.TAG }}" node.yml
           kubectl apply -f node.yml
