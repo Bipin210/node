@@ -45,4 +45,4 @@ jobs:
     - name: running 
       run: |
         cd /home/bipin/helm-chart/node/
-        helm upgrade --set=image.tag=${GITHUB_SHA::7} my-node template
+        helm upgrade --set=image.tag=${{ env.TAG }} my-node template
