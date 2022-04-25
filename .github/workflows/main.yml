@@ -44,5 +44,5 @@ jobs:
       run: echo "TAG=$(echo $GITHUB_SHA | cut -c1-7)" >> $GITHUB_ENV
     - name: running 
       run: |
-        cd /home/bipin/tomcat/
-        helm upgrade --set=image.tag=${GITHUB_SHA::7} my-tomcat tomvat-new
+        cd /home/bipin/helm-chart/node/
+        helm upgrade --set=image.tag=${GITHUB_SHA::7} my-node template
