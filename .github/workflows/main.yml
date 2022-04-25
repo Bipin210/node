@@ -44,7 +44,5 @@ jobs:
       run: echo "TAG=$(echo $GITHUB_SHA | cut -c1-7)" >> $GITHUB_ENV
     - name: running 
       run: |
-          cd /home/anu/wordpress/
-          sed -i "34d" node.yml
-          sed -i "/containers:/a \ \ \ \ \ \ - image:\ sanu139/app:${{ env.TAG }}" node.yml
-          kubectl apply -f node.yml
+        cd /home/bipin/tomcat/
+        helm upgrade --set=image.tag=${GITHUB_SHA::7} my-tomcat tomvat-new
