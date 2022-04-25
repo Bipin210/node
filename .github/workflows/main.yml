@@ -1,4 +1,4 @@
-name: ci cd new
+name: ci cd new niba dai
 
 on:
   push:
