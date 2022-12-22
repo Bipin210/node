@@ -10,7 +10,7 @@ export default () => (
 <h1> This is my first CI&CD </h1>
 <h1> CICD on kubernetes my cicd does not work properly please help me out</h1>
 <h1> We are in devops training session  </h1>
-<h1> hawa.com.np </h1>
+<h1> lftechnology.com.np </h1>
 <h2> Devops Engineer </h2>
   </div>
 );
